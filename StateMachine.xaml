@@ -71,26 +71,27 @@
         <av:PointCollection x:Key="ConnectorLocation">330,40.1 360,40.1 360,40.4 380,40.4</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID2" DisplayName="initial" sap:VirtualizedContainerService.HintSize="511.2,1165.6" sap2010:WorkflowViewState.IdRef="State_1">
+    <State x:Name="__ReferenceID2" DisplayName="initial" sap:VirtualizedContainerService.HintSize="511.2,1106.4" sap2010:WorkflowViewState.IdRef="State_1">
       <State.Entry>
-        <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="466.4,804" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://colab.research.google.com">
+        <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="466.4,744.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://colab.research.google.com">
           <ui:OpenBrowser.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="425.6,701.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,642.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="ui:UiElement" Name="algoritma" />
                   <Variable x:TypeArguments="ui:UiElement" Name="adaelement" />
                   <Variable x:TypeArguments="x:String" Name="fileloc" />
+                  <Variable x:TypeArguments="x:String" Name="fileloc1" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="384,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -112,8 +113,8 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:SelectFile DisplayName="Select File" Filter="All files|*.*" sap:VirtualizedContainerService.HintSize="384,139.2" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[fileloc]" />
-                <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="384,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
+                <ui:SelectFolder DisplayName="Browse for folder" sap:VirtualizedContainerService.HintSize="333.6,80" sap2010:WorkflowViewState.IdRef="SelectFolder_1" SelectedFolder="[fileloc1]" />
+                <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="False">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -135,7 +136,7 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'ToolbarWindow32'" sap:VirtualizedContainerService.HintSize="384,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[fileloc]">
+                <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'ToolbarWindow32'" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[fileloc1]">
                   <ui:TypeInto.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d2c0e43e-3481-455c-aa03-23ef7161309e" InformativeScreenshot="b685ec69b702bd8f98065b280ab3decf" Selector="&lt;wnd app='firefox.exe' cls='#32770' title='File Upload' /&gt;&lt;wnd ctrlid='1001' title='Address: D:\Campus\file s5\bigdat\Big Data 2020\PRAKTIKUM WEEK 4*' /&gt;&lt;ctrl name='Address: D:\Campus\file s5\bigdat\Big Data 2020\PRAKTIKUM WEEK 4*' role='tool bar' /&gt;&lt;ctrl name='All locations' role='split button' /&gt;">
                       <ui:Target.TimeoutMS>
