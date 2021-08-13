@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="run_program" sap:VirtualizedContainerService.HintSize="814.4,1643.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="run_program" sap:VirtualizedContainerService.HintSize="888.8,1643.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
@@ -127,7 +127,7 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="483.2,477.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile Condition="[i&lt;8]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="483.2,477.6" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
         <ui:InterruptibleDoWhile.Body>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,310.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
@@ -157,9 +157,6 @@
             </Assign>
           </Sequence>
         </ui:InterruptibleDoWhile.Body>
-        <ui:InterruptibleDoWhile.Condition>
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="i&lt;8" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
-        </ui:InterruptibleDoWhile.Condition>
       </ui:InterruptibleDoWhile>
       <ui:UiElementExists DisplayName="Element Exists 'INPUT  files-749fef32-1...'" Exists="[inputFileExist]" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
         <ui:UiElementExists.Target>
@@ -180,7 +177,7 @@
               <ui:CursorPosition OffsetX="47" OffsetY="15" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="753f4cde-a176-48c0-b9dc-68947ac56aaf" InformativeScreenshot="c130c15ee678d7ff1c1739924cd51c32" Selector="&lt;html app='firefox.exe' omit:title='revisiAsociationMarketBasketAnalysis_Grocery.ipynb - Colaboratory' /&gt;&lt;webctrl src='https://*' tag='IFRAME' idx='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="753f4cde-a176-48c0-b9dc-68947ac56aaf" InformativeScreenshot="c130c15ee678d7ff1c1739924cd51c32" Selector="&lt;html app='firefox.exe' title='revisiAsociationMarketBasketAnalysis_Grocery.ipynb - Colaboratory' /&gt;&lt;webctrl src='https://mtqoj0sd2nq-496ff2e9c6d22116-0-colab.googleusercontent.c*' tag='IFRAME' /&gt;&lt;webctrl tag='BUTTON' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
