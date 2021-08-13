@@ -83,7 +83,6 @@
               <Variable x:TypeArguments="ui:UiElement" Name="algoritma" />
               <Variable x:TypeArguments="ui:UiElement" Name="adaelement" />
               <Variable x:TypeArguments="x:Boolean" Name="uploadBrowser" />
-              <Variable x:TypeArguments="x:String" Name="fileloc" />
               <Variable x:TypeArguments="x:Boolean" Name="warningout" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
