@@ -1,6 +1,11 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="run_program" sap:VirtualizedContainerService.HintSize="814.4,1643.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="run_program" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="selecdata" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>814.4,1818.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="23">
+    <scg:List x:TypeArguments="x:String" Capacity="24">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System</x:String>
@@ -24,6 +29,7 @@
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -63,7 +69,13 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="566.4,1578.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="566.4,1753.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="i" />
     </Sequence.Variables>
@@ -72,9 +84,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="524.8,1485.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="524.8,1660.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="inputFileExist" />
+        <Variable x:TypeArguments="x:String" Name="namadataset" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -163,7 +176,7 @@
       </ui:InterruptibleDoWhile>
       <ui:UiElementExists DisplayName="Element Exists 'INPUT  files-749fef32-1...'" Exists="[inputFileExist]" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
         <ui:UiElementExists.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6857e50c-bee9-41bf-9bbe-3f29cc86795c" InformativeScreenshot="80f19ee61a6e5bb551177baae100427a" Selector="&lt;html app='firefox.exe' omit:title='revisiAsociationMarketBasketAnalysis_Grocery.ipynb - Colaboratory' idx='9' /&gt;&lt;webctrl src='https://*' tag='IFRAME' idx='1' /&gt;&lt;webctrl tag='INPUT' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6857e50c-bee9-41bf-9bbe-3f29cc86795c" InformativeScreenshot="80f19ee61a6e5bb551177baae100427a" Selector="&lt;html app='firefox.exe' title='revisiAsociationMarketBasketAnalysis_Grocery.ipynb - Colaboratory' /&gt;&lt;webctrl tag='IFRAME' idx='1' /&gt;&lt;webctrl tag='BUTTON' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -180,7 +193,7 @@
               <ui:CursorPosition OffsetX="47" OffsetY="15" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="753f4cde-a176-48c0-b9dc-68947ac56aaf" InformativeScreenshot="c130c15ee678d7ff1c1739924cd51c32" Selector="&lt;html app='firefox.exe' title='revisiAsociationMarketBasketAnalysis_Grocery.ipynb - Colaboratory' /&gt;&lt;webctrl src='https://b2pyfpxhfp8-496ff2e9c6d22116-0-colab.googleusercontent.c*' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="753f4cde-a176-48c0-b9dc-68947ac56aaf" InformativeScreenshot="c130c15ee678d7ff1c1739924cd51c32" Selector="&lt;html app='firefox.exe' omit:title='revisiAsociationMarketBasketAnalysis_Grocery.ipynb - Colaboratory' idx='9' /&gt;&lt;webctrl src='https://*' tag='IFRAME' idx='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -189,6 +202,18 @@
           </ui:Click>
         </If.Then>
       </If>
+      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'Edit'" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[selecdata+ &quot;[k(enter)]&quot;]">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eda6908f-ef43-4d09-a99e-c6fa9933f130" InformativeScreenshot="d1e9ed641bb6709bf6cfda692dd3cd9d" Selector="&lt;wnd app='firefox.exe' cls='#32770' title='File Upload' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
     </Sequence>
   </Sequence>
 </Activity>
