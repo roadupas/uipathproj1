@@ -180,7 +180,7 @@
               <ui:CursorPosition OffsetX="47" OffsetY="15" Position="TopLeft" />
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="753f4cde-a176-48c0-b9dc-68947ac56aaf" InformativeScreenshot="c130c15ee678d7ff1c1739924cd51c32" Selector="&lt;html app='firefox.exe' omit:title='revisiAsociationMarketBasketAnalysis_Grocery.ipynb - Colaboratory' /&gt;&lt;webctrl src='https://*' tag='IFRAME' idx='1' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="753f4cde-a176-48c0-b9dc-68947ac56aaf" InformativeScreenshot="c130c15ee678d7ff1c1739924cd51c32" Selector="&lt;html app='firefox.exe' title='revisiAsociationMarketBasketAnalysis_Grocery.ipynb - Colaboratory' /&gt;&lt;webctrl src='https://b2pyfpxhfp8-496ff2e9c6d22116-0-colab.googleusercontent.c*' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
